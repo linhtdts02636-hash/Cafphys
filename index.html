@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/images/Coffee.png">
+    <title>Cafphy's café - Hangout place</title>
+</head>
+
+<body>
+
+    <audio id="interaction-sound"></audio>
+    <!--HEADER------------------------------------------------------------>
+
+
+    <header class="main-header">
+
+        <nav>
+            <div class="nav-div">
+                <div id="hero-nav">
+                    <a href="#hero">
+                        <img src="assets/images/Home.png" alt="">
+                    </a>
+                </div>
+
+                <div id="cafe-nav">
+                    <a href="#cafe">
+                        <img src="assets/images/Cafe.png" alt="">
+                    </a>
+                </div>
+
+                <div id="menu-nav">
+                    <a href="#menu">
+                        <img src="assets/images/Menu.png" alt="">
+                    </a>
+                </div>
+
+                <div id="about-nav">
+                    <a href="#about">
+                        <img src="assets/images/About.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+        <div class="header-info">
+        <a id="logo" href="">
+            <img src="assets/images/logo.png" alt="">
+        </a>
+
+        <div class="socials">
+            <a id="facebook" href="https://www.facebook.com/profile.php?id=61586694003171" class="links">
+                <img src="assets/images/facebook.png" alt="">
+                <p>Facebook</p>
+            </a>
+            <a id="discord" href="" class="links">
+                <img src="assets/images/discord.png" alt="">
+                <p>Discord</p>
+            </a>
+            <a id="youtube" href="https://www.youtube.com/watch?v=lpiB2wMc49g" class="links">
+                <img src="assets/images/youtube.png" alt="">
+                <p>Youtube</p>
+            </a>
+            <a id="twitter" href="" class="links">
+                <img src="assets/images/twitter.png" alt="">
+                <p>Twitter</p>
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="ui">
+        <div id="coins">
+            <img src="assets/images/coina.png" alt="">
+            <span id="coina-count">0</span>
+        </div>
+        <div id="energy-bar">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+            <img class="energy" src="assets/images/Coffee.png" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="header-title">
+
+        <article>
+            <img src="assets/images/welcome.png" id="welcome-frame" class="frame" alt="">
+            <h3>welcome 2</h3>
+            <h1> CAFPHY'S CAFÉ</h1>
+            <p> so this place is supposed to be a virtual cafe or whatever place you can
+                use to hangout with strangers<br><br>
+                this website runs on my delusional belief that i can actually finish the whole thing in a week or two by
+                myself. u can
+                click
+                stuff, some of it works, most of it works, probably<br><br>
+                anyway look around. dont break anything. and if something breaks, no it didnt</p>
+        </article>
+    </div>
+
+
+
+    <!--MAIN------------------------------------------------------------>
+    <main>
+        <section class="hero" id="hero">
+            <img src="assets/images/frame.png" id="frame" class="frame" alt="">
+            <div class="hero-monoDiv hidden" id="hero-monoDiv">
+                <p id="hero-mono"></p>
+            </div>
+            <audio id="typeSound" src="assets/audio/cafphyVoice3.mp3" preload="auto"></audio>
+            <img id="fallback" src="assets/images/delay.png">
+            <video id="videoA" class="hero-video active" muted playsinline></video>
+            <video id="videoB" class="hero-video" muted playsinline></video>
+            <img src="assets/images/tape.png" id="mute-button" alt="">
+            <img src="assets/images/talk.png" id="talk-button" alt="">
+            <img src="assets/images/music.png" id="music-button" alt="">
+            <div class="music-window hidden" id="music-window">
+                <div class="music-option locked" id="one" data-number="0" data-price="15" data-type="disc">
+                    <img src="assets/images/menumusic.png" alt="" class="music-image">
+                    <p class="music-name">Fly me to the moon - Frank Sinatra</p>
+                </div>
+
+                <div class="music-option locked" id="two" data-number="1">
+                    <img src="assets/images/menumusic1.png" alt="" class="music-image">
+                    <p class="music-name">Monitoring - Deco*27</p>
+                </div>
+
+                <div class="music-option locked" id="three" data-number="2">
+                    <img src="assets/images/menumusic2.png" alt="" class="music-image">
+                    <p class="music-name">Lemon Melon Cookie - Tak</p>
+                </div>
+            </div>
+            <audio id="music-player"></audio>
+
+            <img src="assets/images/info.png" id="info-button">
+            <div class="info-window hidden" id="info-window">
+                <article class="info">
+                    <h1> HOW TO PLAY</h1>
+                    <p>Simply click her to pinch her cheeks and gain coins. Every 5 clicks, you will lose one energy.
+                        You can use your coins to scroll below and buy items to refill your energy, or you can gift
+                        items to other players. Have fun!</p>
+                </article>
+            </div>
+
+        </section>
+
+
+        <section class="cafe" id="cafe">
+            <img src="assets/images/cafeframe.png" id="cafe-frame" class="frame" alt="">
+            <video id="videoCafe" class="cafe-video" autoplay loop muted playsinline></video>
+            <div class="chatButton" id="chatButton">
+                <img src="assets/images/chat.png" alt="">
+            </div>
+            <div class="chat-window-main">
+                <section class="chat-window hidden" id="chat-window">
+                    <div class="chat-title">
+                        <h2>GLOBAL CHAT</h2>
+                        <p>Rules: English only, no spamming, if u are underage i will personally make you explode</p>
+                    </div>
+                    <img src="assets/images/x.png" id="close-button" alt="">
+                    <div class="global-chat">
+                        <div class="message-incoming">
+                            <div class="username">anon1842</div>
+                            <div class="message">why is it so cozy in here tonight</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon5521</div>
+                            <div class="message">rain ambience hits different</div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">wait there's rain ambience?</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon9033</div>
+                            <div class="message">bottom right toggle</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon7710</div>
+                            <div class="message">don't expose the secrets </div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">too late i turned it on</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon2241</div>
+                            <div class="message">ok but what's everyone drinking</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon9920</div>
+                            <div class="message">matcha always</div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">caramel latte supremacy</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon3317</div>
+                            <div class="message">hot chocolate gang rise up</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon1184</div>
+                            <div class="message">why does studying here feel more productive</div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">because everyone else looks focused so i feel judged</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon5521</div>
+                            <div class="message">we are judging you respectfully</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon7710</div>
+                            <div class="message">does anyone actually finish their to-do list</div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">my to-do list is decorative at this point</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon9033</div>
+                            <div class="message">same energy as opening notes and immediately checking chat</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon2241</div>
+                            <div class="message">hydration check btw</div>
+                        </div>
+
+                        <div class="message-outgoing">
+                            <div class="username">me</div>
+                            <div class="message">coffee counts right</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon1184</div>
+                            <div class="message">absolutely not</div>
+                        </div>
+
+                        <div class="message-incoming">
+                            <div class="username">anon9920</div>
+                            <div class="message">barista anon is disappointed</div>
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input">
+                        <input type="text">
+                        <button>
+                            <img src="assets/images/arrow.png" class="button-img" alt="">
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="map-button" id="map-button">
+                <img src="assets/images/map.png" alt="">
+            </div>
+            <div class="loading-screen-main hidden " id="loading-screen-main">
+                <div class="loading-screen  " id="loading-screen">
+                    <video src="assets/test-assets/loading.mp4" id="loading-video" class="" loop autoplay></video>
+                </div>
+            </div>
+
+
+            <div class="map-window-main hidden" id="map-window-main">
+                <div class="map-window">
+                    <div class="points">
+                        <div class="cafe-point" id="cafe-point">
+                            <img src="assets/images/cafepoint.png" class="point">
+                            <a class="mark" id="cafe-mark" alt=""></a>
+                        </div>
+                        <div class="mount-point" id="mount-point">
+                            <img src="assets/images/mountpoint.png" class="point">
+                            <a class="mark hidden" id="mount-mark" alt=""></a>
+
+                        </div>
+                        <div class="wood-point" id="wood-point">
+                            <img src="assets/images/woodpoint.png" class="point">
+                            <a class="mark hidden" id="wood-mark" alt=""></a>
+
+                        </div>
+                    </div>
+                    <img src="assets/images/mapm.png" id="map">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="carousel" id="menu">
+            <img src="assets/images/menuframe.png" id="menu-frame" class="frame" alt="">
+            <div class="menu-header">
+                <h1>MENU</h1>
+            </div>
+            <div class="slider-wrapper">
+                <h3>ITEMS</h3>
+                <div class="slider">
+                    <div class="slider-content" id="content1">
+                        <div class="item" data-price="5" data-type="energy" data-value="2">
+                            <img src="assets/images/menuCoffee.png" alt="">
+                            <h4>Creamw. coffee</h4>
+                            <h2>+2 energy</h2>
+                        </div>
+                        <div class="item" data-price="7" data-type="energy" data-value="3">
+                            <img src="assets/images/menuCoffee2.png" alt="">
+                            <h4>Milk coffee</h4>
+                            <h2>+3 energy</h2>
+                        </div>
+                        <div class="item" data-price="10" data-type="energy" data-value="4">
+                            <img src="assets/images/menuCoffee3.png" alt="">
+                            <h4>Salted coffee</h4>
+                            <h2>+4 energy</h2>
+                        </div>
+                    </div>
+                    <div class="slider-content" id="content2">
+                        <div class="item" data-price="20" data-type="energy" data-value="5">
+                            <img src="assets/images/menuCoffee4.png" alt="">
+                            <h4>Dark coffee</h4>
+                            <h2>+5 energy</h2>
+
+                        </div>
+                        <div class="item" data-price="30" data-type="energy" data-value="7">
+                            <img src="assets/images/menuCoffee5.png" alt="">
+                            <h4>Ice cream</h4>
+                            <h2>+7 energy</h2>
+
+                        </div>
+                        <div class="item" data-price="40" data-type="energy" data-value="9">
+                            <img src="assets/images/menuCoffee6.png" alt="">
+                            <h4>Canned coffee</h4>
+                            <h2>+9 energy</h2>
+
+                        </div>
+
+                    </div>
+                    <div class="slider-content" id="content3">
+                        <div class="item" data-price="25" data-type="energy" data-value="6">
+                            <img src="assets/images/menuCoffee7.png" alt="">
+                            <h4>Regular coffee</h4>
+                            <h2>+6 energy</h2>
+
+                        </div>
+                        <div class="item" data-price="50" data-type="energy" data-value="9">
+                            <img src="assets/images/menuCoffee8.png" alt="">
+                            <h4>Snickers bar</h4>
+                            <h2>+9 energy</h2>
+
+                        </div>
+                        <div class="item" data-price="60" data-type="energy" data-value="10">
+                            <img src="assets/images/menuCoffee9.png" alt="">
+                            <h4>Cupcake</h4>
+                            <h2>+10 energy</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <a href="#content1"></a>
+                    <a href="#content2"></a>
+                    <a href="#content3"></a>
+                </div>
+            </div>
+
+
+            <div class="slider-wrapper">
+                <h3>MUSIC</h3>
+                <div class="slider">
+                    <div class="slider-content" id="content1B">
+                        <div class="item" data-number="0" data-price="15" data-type="disc">
+                            <img src="assets/images/menuMusic.png" alt="">
+                            <h4>Fly me to the moon</h4>
+                        </div>
+                        <div class="item" data-number="1" data-price="15" data-type="disc">
+                            <img src="assets/images/menuMusic1.png" alt="">
+                            <h4>Monitoring</h4>
+                        </div>
+                        <div class="item" data-number="2" data-price="15" data-type="disc">
+                            <img src="assets/images/menuMusic2.png" alt="">
+                            <h4>Lemon Melon Cookie</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="slider-wrapper">
+                <h3>BOOSTERS</h3>
+                <div class="slider">
+                    <div class="slider-content" id="content1B">
+                        <div class="item" data-price="20" data-type="booster" data-boost="1">
+                            <img src="assets/images/booster.png" alt="">
+                            <h4>Booster x2</h4>
+                        </div>
+                        <div class="item" data-price="30" data-type="booster" data-boost="2">
+                            <img src="assets/images/booster2.png" alt="">
+                            <h4>Booster x3</h4>
+                        </div>
+                        <div class="item" data-price="40" data-type="booster" data-boost="4">
+                            <img src="assets/images/booster3.png" alt="">
+                            <h4>Booster x5</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-overlay"></div>
+
+            <div class="lightbox-content">
+                <img src="assets/images/x.png" class="lightbox-close" alt="">
+                <img id="lightbox-img" src="" id="image">
+                <h3 id="lightbox-title"></h3>
+                <div class="price">
+                    <h3 id="lightbox-price"></h3>
+                    <img src="assets/images/coina.png" class="coin">
+                </div>
+
+                <button id="buy-button">Buy</button>
+            </div>
+        </div>
+
+
+    </main>
+    <!--FOOTER------------------------------------------------------------>
+<footer class="footer">
+  <div class="footer-content">
+    <p>hi this is supposed to be the footer but im too lazy so ehhhhhhhhhhhhhhh :P</p>
+  </div>
+</footer>
+
+
+    <script src="js/cafe.js" defer></script>
+    <script src="js/function.js" defer></script>
+    <script src="js/globalchat.js" defer></script>
+</body>
+
+</html>

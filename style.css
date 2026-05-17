@@ -1,0 +1,1415 @@
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    background-image: url(assets/images/pattern.png);
+    font-family: "Byte";
+    overflow-x: hidden;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+    cursor: url("assets/images/cursora.png") 0 0, auto;
+    animation: intro 1.5s steps(10);
+    font-size: clamp(12px, 1.5vw, 18px);
+    margin-top: -60px;;
+
+}
+
+
+@font-face {
+    font-family: "Byte";
+    src: url(assets/fonts/ByteBounce.ttf);
+
+}
+
+button,
+a {
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+
+
+
+/*-----------------------------------------nav-----------------------------------------*/
+
+/*.intro {
+    width: 10000vh;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 10000vh;
+    background-color: #0071d4;
+    animation: intro 2s ease-in-out;
+}*/
+
+.header-info {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 40%;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.socials {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links {
+    text-align: center;
+}
+
+#logo img {
+    width: 100%;
+}
+
+.links img {
+    width: 70px;
+    image-rendering: pixelated;
+
+}
+
+.header-info a {
+    text-decoration: none;
+
+}
+
+
+
+.links p {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+
+.links:hover p {
+    text-align: center;
+    color: hsl(19, 63%, 83%);
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+
+
+.main-header {
+    position: sticky;
+    display: flex;
+    top: -10px;
+    margin-bottom: 200px;
+    margin: 0 auto;
+    justify-content: center;
+    z-index: 10099;
+
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+
+.nav-div {
+    display: flex;
+    margin-top: -10px;
+    animation: slideNavIntro 2s steps(15)
+}
+
+/*#hero-nav, #menu-nav{
+    animation: jiggle1 5s steps(30);
+}
+
+#cafe-nav, #about-nav{
+    animation: jiggle1 4s steps(30);
+    
+}*/
+
+.nav-div img {
+    width: 120px;
+    image-rendering: pixelated;
+}
+
+#hero-nav:hover,
+#cafe-nav:hover,
+#menu-nav:hover,
+#about-nav:hover {
+    animation: slideNav 0.5s steps(2);
+    transform: translateY(20px);
+}
+
+
+
+.header-title {
+    opacity: 1;
+    text-align: justify;
+    line-height: 10%;
+    background-color: hsl(19, 63%, 83%);
+    position: relative;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 0 0 hsl(17, 39%, 15%);
+    animation: slide steps(10) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+}
+
+#welcome-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.header-title h3,
+.header-title h1 {
+    padding: 10px;
+    line-height: 0;
+    margin-bottom:0px;
+}
+
+
+.header-title img {
+    position: absolute;
+    top: 20px;
+    right: 20vh;
+    width: 100px;
+}
+
+.header-title article {
+    line-height: 100%;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.ui {
+    position: sticky;
+    top: 85vh;
+    width: fit-content;
+    margin-bottom: -20px;
+    z-index: 100000000;
+    animation: slide 1s steps(10);
+}
+
+#energy-bar {
+    display: flex;
+    max-width: 100px;
+}
+
+#energy-bar img {
+    position: relative;
+    width: 50%;
+    column-gap: 100px;
+}
+
+.ui img {
+    width: 50px;
+    image-rendering: pixelated;
+
+}
+
+#coins {
+    font-size: 40px;
+}
+
+#coins img {
+    width: 30px;
+}
+
+/*-----------------------------------------cafphy-----------------------------------------*/
+
+main {
+    margin: auto;
+    margin-bottom: -100px;
+
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: none;
+    text-align: center;
+    animation: slide steps(10) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+    margin: auto;
+    margin-bottom: 100px;
+    width: 70%;
+    cursor: url(assets/images/pincha.png) 0 0, pointer;
+    box-shadow: 10px 10px 0 0 hsl(17, 39%, 15%);
+    background-color: hsl(17, 39%, 15%);
+}
+
+
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-video.active {
+    opacity: 1;
+
+
+}
+
+#frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+    object-fit: contain;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+#fallback {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+}
+
+.hero-monoDiv {
+    position: relative;
+    right: 0;
+    top: 70vh;
+    margin: auto;
+    display: flex;
+    height: 100px;
+    width: 500px;
+    font-size: 25px;
+    z-index: 10000000;
+    background-color: #4a2722;
+    border: rgb(236, 212, 187) 4px solid;
+    filter: blur(0.3px);
+
+}
+
+#hero-mono {
+    text-align: left;
+    width: fit-content;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2%;
+    padding: 10px;
+    color: rgb(236, 212, 187);
+}
+
+
+
+
+#mute-button {
+    position: absolute;
+    z-index: 100;
+    width: 70px;
+    bottom: 20px;
+    right: 20px;
+    image-rendering: pixelated;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+    animation: slideCafe 3s steps(15);
+}
+
+
+#talk-button {
+    position: absolute;
+    z-index: 100;
+    width: 70px;
+    bottom: 120px;
+    right: 20px;
+    image-rendering: pixelated;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+    animation: slideCafe 3.5s steps(20);
+
+}
+
+#music-button {
+    position: absolute;
+    z-index: 100;
+    width: 70px;
+    bottom: 220px;
+    right: 20px;
+    image-rendering: pixelated;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+    animation: slideCafe 4s steps(20);
+
+}
+
+.locked {
+    filter: grayscale(100%);
+}
+
+
+#info-button {
+    position: absolute;
+    z-index: 100;
+    width: 70px;
+    bottom: 320px;
+    right: 20px;
+    image-rendering: pixelated;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+    animation: slideCafe 4.5s steps(30);
+
+}
+
+.info-window {
+    background-color: hsl(19, 63%, 83%);
+    width: 100vh;
+    height: 70vh;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    z-index: 100000000000;
+}
+
+
+.info {
+    font-size: 2rem;
+    line-height: 20px;
+    text-align: justify;
+    padding: 50px;
+}
+
+#mute-button:hover,
+#talk-button:hover,
+#info-button:hover,
+#music-button:hover {
+    width: 75px;
+}
+
+.is-animated {
+    animation: intro 0.5s steps(5);
+}
+
+.is-animated-outro {
+    animation: outro 0.5s steps(5);
+}
+
+
+.frame {
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+    image-rendering: pixelated;
+    z-index: 9999;
+}
+
+.music-window {
+    background-color: hsl(19, 63%, 83%);
+    width: 100vh;
+    height: 50vh;
+    position: relative;
+    top: 150px;
+    margin: auto;
+    display: flex;
+    z-index: 100000000000;
+}
+
+.music-option {
+    height: 100%;
+    font-size: 1.2rem;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+#one {
+    flex: 1;
+
+}
+
+#two {
+    flex: 1;
+}
+
+#three {
+    flex: 1;
+}
+
+.music-option img {
+    width: 80%;
+    image-rendering: pixelated;
+    margin-top: 60px;
+}
+
+
+
+/*-----------------------------------------cafe thingies-----------------------------------------*/
+
+.cafe {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide steps(10) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 0 0 rgb(53, 32, 23);
+
+}
+
+.cafe-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#cafe-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.hero,
+.cafe {
+    position: relative;
+}
+
+.lower {
+    opacity: 0.5;
+}
+
+.chatButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    margin: 20px;
+    text-align: center;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+.chatButton img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+.chatButton h4 {
+    font-size: 2rem;
+}
+
+
+.chat-window-main {
+    position: absolute;
+    height: 80%;
+    width: 95%;
+
+}
+
+.chat-window {
+    background-image: url(assets/images/pattern.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: hsl(17, 39%, 15%) 3px solid;
+    z-index: 1000;
+}
+
+.chat-window h2 {
+    font-size: 3rem;
+    margin: auto;
+    padding: 10px
+}
+
+.chat-title p {
+    font-size: 1.2rem;
+}
+
+.chat-title {
+    border-bottom: hsl(17, 39%, 15%) 3px solid;
+    line-height: 1px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: hsl(19, 31%, 50%);
+    box-shadow: 0px 5px 0 0 hsl(17, 39%, 15%);
+}
+
+.hidden {
+    display: none;
+}
+
+#close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.global-chat {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(19, 47%, 69%) hsl(19, 31%, 50%);
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    height: 80%;
+}
+
+.message-incoming {
+    max-width: fit-content;
+    max-height: max-content;
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: hsl(19, 31%, 50%);
+    color: rgb(0, 0, 0);
+    line-height: 110%;
+    box-shadow: 5px 5px 0 0 hsl(17, 39%, 15%);
+}
+
+.message-outgoing {
+    max-width: fit-content;
+    max-height: max-content;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    margin-left: auto;
+    background-color: hsl(19, 47%, 69%);
+    color: rgb(0, 0, 0);
+    line-height: 110%;
+    box-shadow: 5px 5px 0 0 hsla(17, 39%, 15%);
+}
+
+.username {
+    font-size: 1.7rem;
+}
+
+.chat-input {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-top: hsl(17, 39%, 15%) 3px solid;
+
+}
+
+.chat-input input {
+    flex: 1;
+    font-family: "Byte";
+    padding-top: 10px;
+    width: 100%;
+    font-size: 1.6rem;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: hsl(19, 47%, 69%);
+    cursor: url(assets/images/typer.png) 0 0, auto;
+
+}
+
+.chat-input button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    text-align: justify;
+    height: 30px;
+    width: 50px;
+    margin-right: 5px;
+    font-family: "Byte";
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.button-img {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+}
+
+.loading-screen-main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(33, 36, 36);
+
+}
+
+.loading-screen {
+    background-color: rgb(33, 36, 36);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.loading-screen video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+.map-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    margin: 20px;
+    margin-left: 130px;
+    text-align: center;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.map-button img {
+    width: 100%;
+    image-rendering: pixelated;
+
+}
+
+
+.map-window-main {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+
+}
+
+.map-window {
+    background-image: url();
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.map-window img {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+#map-button:hover,
+#chatButton:hover {
+    width: 75px;
+}
+
+
+.points {
+    z-index: 10000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cafe-point {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 40vh;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+.mount-point {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 35vh;
+    right: 25vh;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+.wood-point {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 45vh;
+    right: 64vh;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+.mark {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    background-color: #e1c7bb;
+    border: #242323 2px solid;
+}
+/*-----------------------------------------menu-----------------------------------------*/
+
+.carousel {
+    opacity: 0;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    animation: slide steps(10) forwards;
+    animation-timeline: view();
+    animation-range: entry 30% entry 70%;
+    background-color: hsl(16, 34%, 57%);
+    box-shadow: 10px 10px 0 0 hsl(17, 39%, 15%);
+
+
+}
+
+#menu-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+
+.menu-header {
+    position: relative;
+    top:40px;
+    width: 100%;
+    height: 100px;
+    margin-top:0;
+}
+
+.menu-header h1 {
+    position: absolute;
+    font-size: 8rem;
+    right:50%;
+    transform: translateX(50%);
+    margin:0;
+    width:100%;
+    text-align: center;
+    background-color: #242323;
+    color: hsl(19, 63%, 83%);
+}
+
+.slider {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 100px;
+    scrollbar-width: none;
+    width:80%;
+    margin: auto;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    width: 10rem;
+    scroll-snap-align: start;
+    image-rendering: pixelated;
+}
+
+
+
+.slider-content {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-nav a {
+    height: 2rem;
+    width: 2rem;
+    background-color: #242323;
+    
+}
+
+.slider-nav a:hover {
+    height: 2rem;
+    width: 2rem;
+    background-color: hsl(19, 63%, 83%)
+}
+
+
+.slider-wrapper h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    background-color: #242323;
+    color: hsl(19, 63%, 83%);
+text-align: center;
+}
+
+.item {
+    border: #242323 4px solid;
+    background-color: hsl(19, 63%, 83%);
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+
+}
+
+
+.item img {
+    margin-top:20px;
+
+}
+
+.item h4 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 0%);
+    border: #242323 3px solid;
+
+    background-color: hsl(19, 63%, 83%);
+
+}
+
+.item h2 {
+    position: relative;
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    border: #242323 3px solid;
+    margin-top: -30px;
+    background-color: hsl(19, 63%, 83%);
+
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 200000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+#lightbox-title {
+    font-size: 3rem;
+    margin:0;
+}
+
+
+.lightbox-content {
+    position: relative;
+    background: hsl(19, 63%, 83%);
+    padding: 2rem;
+    max-width: 500px;
+    width: 20%;
+    text-align: center;
+    z-index: 99999999999992;
+    animation: intro 0.6s steps(5);
+}
+
+#lightbox-img {
+    width: 67%;
+    margin-bottom: 1rem;
+    image-rendering: pixelated;
+    margin:0;
+
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: url(assets/images/pointera.png) 0 0, pointer;
+}
+#lightbox-price{
+    font-size: 3rem;
+    margin:0;
+
+}
+
+
+.price {
+    position: relative;
+    margin-bottom:30px;
+    display: flex;
+    flex-direction: row;
+    width:75px;
+    margin: auto;
+
+}
+
+#buy-button {
+    width: 100px;
+    height: 50px;
+    font-size: 3rem;
+    font-family: "Byte";
+    background-color: #242323;
+    color: hsl(19, 63%, 83%);
+}
+
+.coin {
+    position: absolute;
+    top:5px;
+    right:0;
+    width: 1.7rem;
+    image-rendering: pixelated;
+}
+
+/*-----------------------------------------responsive-----------------------------------------*/
+
+
+.hero,
+.cafe,
+.carousel,
+.header-title {
+  width: 90%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+
+  .header-info {
+    position: relative;
+    height: auto;
+  }
+
+  .links img {
+    width: 40px;
+  }
+
+  .links p {
+    font-size: 1rem;
+  }
+
+  #facebook,
+  #discord,
+  #youtube,
+  #twitter {
+    position: static;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .main-header {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .nav-div img {
+    width: 70px;
+  }
+
+  .hero,
+  .cafe,
+  .carousel {
+    width: 95%;
+  }
+
+  .hero-monoDiv {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .menu-header h1 {
+    font-size: 10rem;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .item h4,
+  .item h2 {
+    font-size: 2rem;
+  }
+
+  .chat-window {
+    font-size: 0.9rem;
+  }
+
+  .lightbox-content {
+    width: 90%;
+  }
+
+  #lightbox-img {
+    width: 40%;
+  }
+
+  .price {
+    width:55px;
+  }
+
+}
+
+footer {
+    background-color: #4a2722;
+    font-size: 2rem;
+    color: hsl(19, 63%, 83%);
+    position: relative;
+    margin-top:400px;
+    width:100%;
+    height:50vh;
+}
+/*-----------------------------------------animations-----------------------------------------*/
+
+
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideR2L {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@keyframes slideL2R {
+    from {
+        opacity: 1;
+        transform: translateY(0x);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes outro {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+
+@keyframes jiggle1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px) translateX(-50px) rotate(10deg);
+    }
+
+    3% {
+        transform: translateY(-50px) translateX(-50px) rotate(10deg);
+    }
+
+    13% {
+        transform: translateY(5px) translateX(0px)rotate(4deg);
+    }
+
+    18% {
+        opacity: 1;
+        transform: translateY(-1px) translateX(18px)rotate(-5deg);
+    }
+
+    20% {
+        transform: translateY(-2px) translateX(18px)rotate(-6deg);
+    }
+
+    21% {
+        transform: translateY(-2px) translateX(18px)rotate(-6deg);
+    }
+
+    23% {
+        transform: translateY(-2px) translateX(17px)rotate(-6deg);
+    }
+
+    28% {
+        transform: translateY(2px) translateX(0px)rotate(-1deg);
+    }
+
+
+    33% {
+        transform: translateY(-1px) translateX(-7px) rotate(4deg);
+    }
+
+    36% {
+        transform: translateY(-1px) translateX(-9px) rotate(5deg);
+    }
+
+    39% {
+        transform: translateY(-1px) translateX(-9px) rotate(5deg);
+    }
+
+    41% {
+        transform: translateY(-1px) translateX(-7px) rotate(4deg);
+    }
+
+
+
+    49% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    50% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    55% {
+        transform: translateY(0) translateX(7px) rotate(-3deg);
+
+    }
+
+    57% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    70% {
+        transform: translateY(0) translateX(-3px) rotate(3deg);
+
+    }
+
+    100% {
+        transform: translateY(0) translateX(0px);
+    }
+}
+
+
+@keyframes jiggle2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px) translateX(-50px) rotate(10deg);
+    }
+
+
+    13% {
+        transform: translateY(5px) translateX(0px)rotate(4deg);
+    }
+
+    18% {
+        opacity: 1;
+        transform: translateY(-1px) translateX(18px)rotate(-5deg);
+    }
+
+    20% {
+        transform: translateY(-2px) translateX(18px)rotate(-6deg);
+    }
+
+    21% {
+        transform: translateY(-2px) translateX(18px)rotate(-6deg);
+    }
+
+    23% {
+        transform: translateY(-2px) translateX(17px)rotate(-6deg);
+    }
+
+    28% {
+        transform: translateY(2px) translateX(0px)rotate(-1deg);
+    }
+
+
+    33% {
+        transform: translateY(-1px) translateX(-7px) rotate(4deg);
+    }
+
+    36% {
+        transform: translateY(-1px) translateX(-9px) rotate(5deg);
+    }
+
+    39% {
+        transform: translateY(-1px) translateX(-9px) rotate(5deg);
+    }
+
+    41% {
+        transform: translateY(-1px) translateX(-7px) rotate(4deg);
+    }
+
+
+
+    49% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    50% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    55% {
+        transform: translateY(0) translateX(7px) rotate(-3deg);
+
+    }
+
+    57% {
+        transform: translateY(0) translateX(6px) rotate(-2deg);
+
+    }
+
+    70% {
+        transform: translateY(0) translateX(-3px) rotate(3deg);
+
+    }
+
+    100% {
+        transform: translateY(0) translateX(0px);
+    }
+}
+
+
+
+@keyframes slideCafe {
+    from {
+        transform: translateX(300%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideNav {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes slideNavIntro {
+    from {
+        transform: translateY(-300%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
